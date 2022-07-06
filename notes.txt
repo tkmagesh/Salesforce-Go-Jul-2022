@@ -1,0 +1,23 @@
+Magesh Kuppan
+
+
+Schedule:
+    Commence    : 9:00 AM
+    Tea Break   : 10:45 AM (20 mins)
+    Lunch Break : 12:30 PM (1 Hr)
+    Tea Break   : 3:00 PM (20 mins)
+    Wind up     : 5:00 PM
+
+Methodology:
+    No powerpoints
+    100% handon driven
+
+About You:
+    Name
+    Job Title
+    Primary Skillset
+    Experience in Go (if any)
+
+Software Requirements
+    1. Go tools
+    2. Visual Studio Code / Goland
