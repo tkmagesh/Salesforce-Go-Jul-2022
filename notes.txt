@@ -80,3 +80,29 @@ The list of other platform configurations can be found at :
  To change the default environment variables
         go env -w GOOS=linux GOARCH=amd64
         go build -o <build_filename> <filename.go>
+
+
+Data Types in Go
+    bool
+    string
+
+    int
+    int8
+    int16
+    int32
+    int64
+
+    uint
+    uint8
+    uint16
+    uint32
+    uint64
+
+    float32
+    float64
+
+    complex64 (real[float32] imaginary[float32])
+    complex128 (real[float64] imaginary[float64])
+
+    byte (alias for uint8)
+    rune (alias for int32) (unicode code point)

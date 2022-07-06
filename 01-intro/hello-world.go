@@ -1,8 +1,21 @@
 /* package declaration */
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 /* import dependency packages */
+/*
 import "fmt"
+import "os"
+*/
+
+/* import (
+	"fmt"
+	"os"
+) */
 
 /* package level variable/type declarations */
 
@@ -10,7 +23,7 @@ import "fmt"
 
 /* main function */
 func main() {
-	//fmt.Println(os.Args)
+	fmt.Println(os.Args)
 	fmt.Println("Hello World!")
 }
 
