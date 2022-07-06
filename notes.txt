@@ -21,3 +21,62 @@ About You:
 Software Requirements
     1. Go tools
     2. Visual Studio Code / Goland
+
+GitHub Repo:
+    https://github.com/tkmagesh/Salesforce-Go-Jul-2022
+
+Recordings:
+    https://forms.gle/gTJwnshuJWAk3u6z9
+
+
+
+Day-1
+    Why Go?
+
+        1. Performance
+            On par with C++
+            No VM
+
+        2. Concurrency
+            Ability to have more than one execution path in an application
+            Represented as a goroutine
+            Only 4KB for a goroutine
+            Scheduling the goroutines is taken care by the schedule (built in the application)
+            Go language is built for concurrency
+            Language features:
+                go, chan (data type), <- (channel operator), range, select
+            Apis
+                sync package
+                sync/atomic packages
+
+        3. Simplicity
+            ONLY 25 keywords
+                - No access modifiers
+                - No classes (only structs)
+                - No inheritance (only composition)
+                - No exceptions (only errors)
+                - No reference types (everything is a value)
+                - No implicit type conversion
+                - No pointer arithmetic
+
+Paradox of Choice (Barry Schwartz)
+    https://www.youtube.com/watch?v=VO6XEQIsCoM&t=12s
+
+
+
+
+
+
+To run a go program
+    go run hello-world.go 
+
+To create a build
+    go build <program.go>
+    go build -o <binary_name> <program.go>
+
+The list of other platform configurations can be found at :
+        https://go.dev/doc/install/source#environment
+
+ To change the default environment variables
+        go env -w GOOS=linux GOARCH=amd64
+        go build -o <build_filename> <filename.go>
