@@ -126,4 +126,40 @@ func main() {
 		fmt.Println("All [Free] features included")
 	}
 
+	//LOOPs using 'for'
+	fmt.Println()
+	fmt.Println("LOOPs using for")
+	fmt.Println("for (v1)")
+	for i := 1; i <= 5; i++ {
+		fmt.Printf("i = %d\n", i)
+	}
+
+	fmt.Println("for (v2) [imitating while]")
+	i := 1
+	for i <= 5 {
+		fmt.Printf("i = %d\n", i)
+		i++
+	}
+
+	fmt.Println("for (v3) [infinite loop]")
+	numSum := 1
+	for {
+		numSum += numSum
+		fmt.Printf("numSum = %d\n", numSum)
+		if numSum > 100 {
+			break
+		}
+	}
+
+	fmt.Println()
+	fmt.Println("Using LABELs")
+LOOP:
+	for i := 1; i <= 10; i++ {
+		for j := 1; j < 10; j++ {
+			fmt.Printf("i = %d, j = %d\n", i, j)
+			if i == j {
+				continue LOOP
+			}
+		}
+	}
 }
