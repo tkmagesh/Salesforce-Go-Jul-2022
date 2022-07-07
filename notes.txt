@@ -127,3 +127,53 @@ Collection
 
     Map
         typed collection of key value pairs
+
+
+    Modularity
+        Modules
+            Any code that need to be versioned together
+            typically, it is an application
+            go.mod file
+
+            creating a mod file
+                go mod init <module_name>
+                convention => module_name == github.com/tkmagesh/myapp
+
+            To run a module
+                go run .
+            
+            to create a build
+                go build .
+                go build -o <binary_name> .
+
+            to install a 3rd party module
+                go get github.com/fatih/color
+
+            to updated the mod file
+                go mod tidy
+
+            to localize the dependencies
+                go mod vendor
+
+            Other mod commands
+                go mod graph
+                go mod why
+
+            Reference:
+                https://go.dev/ref/mod
+
+                
+        Packages
+            logical grouping of the code
+
+
+    In the absence of modules
+        $GOPATH
+            bin
+            pkg
+            src
+                github.com
+                    tkmagesh
+                        calculator
+                            add.go
+                            subtract.go
