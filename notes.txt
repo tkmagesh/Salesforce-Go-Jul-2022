@@ -115,3 +115,15 @@ Functions
         pass functions are arguments to other functions
         return functions as return values from other functions
     deferred functions
+
+
+Collection
+    Array
+        fixed size collection of data of the same type
+
+    Slice
+        variable size collection of data of the same type
+        it is wrapper for an array
+
+    Map
+        typed collection of key value pairs
