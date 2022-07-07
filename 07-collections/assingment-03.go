@@ -95,7 +95,6 @@ func divide(x, y int) int {
 }
 
 func process(userChoice int) error {
-
 	if operation, exists := operations[userChoice]; exists {
 		x, y := getOperands()
 		result := operation(x, y)
