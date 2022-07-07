@@ -110,3 +110,7 @@ Data Types in Go
 Functions
     variadic functions
     anonymous functions
+    higher order functions
+        assign functions to variables
+        pass functions are arguments to other functions
+        return functions as return values from other functions
