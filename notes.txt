@@ -109,3 +109,4 @@ Data Types in Go
 
 Functions
     variadic functions
+    anonymous functions
