@@ -114,3 +114,4 @@ Functions
         assign functions to variables
         pass functions are arguments to other functions
         return functions as return values from other functions
+    deferred functions
