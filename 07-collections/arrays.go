@@ -23,4 +23,11 @@ func main() {
 	for idx, val := range nos {
 		fmt.Printf("nos[%d] = %d\n", idx, val)
 	}
+
+	/*
+		newNos := nos[:]
+		newNos = append(newNos, 10, 20, 30)
+		fmt.Println(nos, newNos)
+	*/
+
 }
