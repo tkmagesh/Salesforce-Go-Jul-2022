@@ -8,6 +8,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"time"
 )
 
 func main() {
@@ -26,10 +27,19 @@ func main() {
 	logAdd := getLogOperation(add)
 	logSubtract := getLogOperation(subtract)
 
-	logAdd(100, 200)
-	logSubtract(100, 200)
+	/* logAdd(100, 200)
+	logSubtract(100, 200) */
 
-	getLogOperation(add)(1000, 2000)
+	/*
+		profileAdd := getProfileOperation(add)
+		profileAdd(100, 200)
+	*/
+
+	profileAndLogAdd := getProfileOperation(logAdd)
+	profileAndLogSubtract := getProfileOperation(logSubtract)
+
+	profileAndLogAdd(100, 200)
+	profileAndLogSubtract(100, 200)
 }
 
 func getFn() func() {
@@ -46,13 +56,24 @@ func getLogOperation(operation func(int, int)) func(int, int) {
 	}
 }
 
+func getProfileOperation(operation func(int, int)) func(int, int) {
+	return func(x, y int) {
+		start := time.Now()
+		operation(x, y)
+		elpased := time.Now().Sub(start)
+		fmt.Println("Elapsed : ", elpased)
+	}
+}
+
 /* 3rd party library - can't modify them */
 func add(x, y int) {
+	time.Sleep(3 * time.Second)
 	var result = x + y
 	fmt.Println("Add result = ", result)
 }
 
 func subtract(x, y int) {
+	time.Sleep(5 * time.Second)
 	var result = x - y
 	fmt.Println("Subtract result = ", result)
 }
