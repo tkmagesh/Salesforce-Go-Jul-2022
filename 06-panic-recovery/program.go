@@ -29,6 +29,9 @@ func divideClient(x, y int) (quotient, remainder int, err error) {
 	defer func() {
 		if e := recover(); e != nil {
 			err = e.(error)
+			if err.Error() == "runtime error: integer divide by zero" {
+				err = DivideByZeroError
+			}
 		}
 	}()
 	quotient, remainder = divide(x, y)
@@ -37,9 +40,6 @@ func divideClient(x, y int) (quotient, remainder int, err error) {
 
 //3rd party
 func divide(x, y int) (quotient, remainder int) {
-	if y == 0 {
-		panic(DivideByZeroError)
-	}
 	quotient = x / y
 	remainder = x % y
 	return
