@@ -48,8 +48,36 @@ func (p Product) Format() string {
 
 */
 
+type Products []Product
+
+func (products Products) Format() string {
+	result := ""
+	for _, product := range products {
+		result += fmt.Sprintf("%s\n", product.Format())
+	}
+	return result
+}
+
+func (products Products) IndexOf(product Product) int {
+	for idx, p := range products {
+		if p == product {
+			return idx
+		}
+	}
+	return -1
+}
+
+func (products Products) Filter(predicate func(Product) bool) (result Products) {
+	for _, product := range products {
+		if predicate(product) {
+			result = append(result, product)
+		}
+	}
+	return result
+}
+
 func main() {
-	products := []Product{
+	products := Products{
 		Product{105, "Pen", 5, 50, "Stationary"},
 		Product{107, "Pencil", 2, 100, "Stationary"},
 		Product{103, "Marker", 50, 20, "Utencil"},
@@ -58,4 +86,17 @@ func main() {
 		Product{104, "Scribble Pad", 20, 20, "Stationary"},
 		Product{109, "Golden Pen", 2000, 20, "Stationary"},
 	}
+
+	fmt.Println("Initial List")
+	fmt.Println(products.Format())
+
+	marker := Product{103, "Marker", 50, 20, "Utencil"}
+	fmt.Println("Index of marker = ", products.IndexOf(marker))
+
+	costlyProductPredicate := func(product Product) bool {
+		return product.Cost > 1000
+	}
+	costlyProducts := products.Filter(costlyProductPredicate)
+	fmt.Println(costlyProducts.Format())
+
 }
