@@ -177,3 +177,8 @@ Collection
                         calculator
                             add.go
                             subtract.go
+
+
+Concurrency
+    Data Race Detection
+        go run --race demo-08.go 
