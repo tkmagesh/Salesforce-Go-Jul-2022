@@ -196,3 +196,7 @@ Testing
     testing package
     To run the tests
         go test ./... -v
+
+Memory Model
+    https://research.swtch.com/mm
+    
