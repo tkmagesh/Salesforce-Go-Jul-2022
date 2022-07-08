@@ -185,3 +185,8 @@ Concurrency
 
         ch <- 100 (send operation)
         data := <- ch (receive operation)
+
+    Channels 
+        A receive operation is ALWAYS a blocking operation
+        A send operation is blocked until a 'receive' operation is initiated (conditions apply)
+            in other words, a 'send' operation will be successful ONLY if the 'receive' operation is already initiated
