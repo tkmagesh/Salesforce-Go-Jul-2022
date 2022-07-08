@@ -182,3 +182,6 @@ Collection
 Concurrency
     Data Race Detection
         go run --race demo-08.go 
+
+        ch <- 100 (send operation)
+        data := <- ch (receive operation)
