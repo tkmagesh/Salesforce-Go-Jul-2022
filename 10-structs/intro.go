@@ -20,12 +20,12 @@ func main() {
 			Name: "Magesh",
 		}
 	*/
-	/*
-		var emp = Employee{
-			Id:   100,
-			Name: "Magesh",
-		}
-	*/
+
+	var emp = Employee{
+		Id:   100,
+		Name: "Magesh",
+	}
+	fmt.Println("emp Name = ", emp.Name)
 	/*
 		emp := Employee{
 			Id:   100,
@@ -34,10 +34,11 @@ func main() {
 	*/
 
 	//pointer
-	//emp := new(Employee)
-	emp := &Employee{
+	//empPtr := new(Employee)
+	empPtr := &Employee{
 		Id:   100,
 		Name: "Magesh",
 	}
-	fmt.Printf("%#v\n", emp)
+	fmt.Printf("%#v\n", empPtr)
+	fmt.Println("emp Name = ", empPtr.Name)
 }
