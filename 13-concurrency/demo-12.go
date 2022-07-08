@@ -33,7 +33,7 @@ func main() {
 	fmt.Println(result)
 }
 
-func add(x, y int, ch chan int) {
+func add(x, y int, ch chan<- int) {
 	time.Sleep(3 * time.Second)
 	result := x + y
 	ch <- result
